@@ -201,7 +201,7 @@ jobs:
         with:
           image: peribolos-as-a-service
           tags: ${{ github.sha }} ${{ needs.release-to-git.outputs.tag }}
-          registry: quay.io/open-services-group
+          registry: quay.io/tcoufal
           username: ${{ secrets.QUAY_USERNAME }}
           password: ${{ secrets.QUAY_PASSWORD }}
 
@@ -240,7 +240,7 @@ jobs:
         with:
           image: peribolos
           tags: ${{ github.sha }} ${{ needs.release-to-git.outputs.tag }}
-          registry: quay.io/open-services-group
+          registry: quay.io/tcoufal
           username: ${{ secrets.QUAY_USERNAME }}
           password: ${{ secrets.QUAY_PASSWORD }}
 

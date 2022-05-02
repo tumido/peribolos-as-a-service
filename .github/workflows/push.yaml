@@ -30,11 +30,11 @@ jobs:
 
       - name: Push To Quay
         uses: redhat-actions/push-to-registry@v2
-        if: ${{ github.repository == 'open-services-group/peribolos-as-a-service'}}
+        if: ${{ github.repository == 'tumido/peribolos-as-a-service'}}
         with:
           image: peribolos-as-a-service
           tags: ${{ github.sha }} latest
-          registry: quay.io/open-services-group
+          registry: quay.io/tcoufal
           username: ${{ secrets.QUAY_USERNAME }}
           password: ${{ secrets.QUAY_PASSWORD }}
 
@@ -52,10 +52,10 @@ jobs:
 
       - name: Push To Quay
         uses: redhat-actions/push-to-registry@v2
-        if: ${{ github.repository == 'open-services-group/peribolos-as-a-service'}}
+        if: ${{ github.repository == 'tumido/peribolos-as-a-service'}}
         with:
           image: peribolos
           tags: ${{ github.sha }} latest
-          registry: quay.io/open-services-group
+          registry: quay.io/tcoufal
           username: ${{ secrets.QUAY_USERNAME }}
           password: ${{ secrets.QUAY_PASSWORD }}
