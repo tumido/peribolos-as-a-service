@@ -2,14 +2,14 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
-- ../../base
+  - ../../base
 configurations:
-- .transformers.yaml
+  - .transformers.yaml
 generators:
-- .ksops.yaml
+  - .ksops.yaml
 namespace: peribolos-as-a-service
 images:
-- name: quay.io/open-services-group/peribolos-as-a-service
-  newTag: v0.0.1
-- name: quay.io/open-services-group/peribolos
-  newTag: v0.0.1
+  - name: quay.io/open-services-group/peribolos-as-a-service
+    newTag: v1.0.0
+  - name: quay.io/open-services-group/peribolos
+    newTag: v1.0.0
